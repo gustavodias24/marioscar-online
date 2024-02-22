@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta CPF/CNPJ</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff0000; /* cor vermelha */
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #cc0000; /* tom mais escuro de vermelho no hover */
+        }
+
+        @media (max-width: 768px) {
+            input[type="text"], input[type="submit"], div[class="logo"], h1 {
+                width: 100%;
+            }
+        }
+
+        h1:first-child {
+            margin-bottom: 0; /* Removendo a margem inferior do primeiro h1 */
+        }
+
+        h1:last-child {
+            margin-top: 20px; /* Adicionando uma margem superior para separar os h1 */
+        }
+
+        .caixa {
+            background-color: #007bff; /* Azul */
+            border-radius: 10px; /* Bordas arredondadas */
+            padding: 20px; /* Espaçamento interno */
+            margin-bottom: 20px; /* Espaçamento externo inferior */
+        }
+        p,h1 {
+            margin: 0px;
+            padding: 0px;
+        }
+        a.voltar {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff0000;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo" style="background-image: url('{{ url_for('static', filename='logo.png') }}')"></div>
+        <h1>Resultado para o Cpf</h1>
+        <h1 style="margin-bottom: 16px;">{{ resultado.cpf }}</h1>
+
+        {% for os in resultado.os %}
+        <div class="caixa">
+            {% for linha in os.split('\n') %}
+                
+                {% if ".imgur" in linha %}
+                    <a href="{{linha}}" target="_blank">
+                        <img width="100" height="180" src="{{ linha }}">
+                    </a>
+                {% else %}
+                    <p>{{ linha }}</p>
+                {% endif %}
+
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+
+        <a href="/" class="voltar">Voltar</a>
+    </div>
+</body>
+</html>
