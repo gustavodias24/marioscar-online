@@ -61,16 +61,17 @@ def consultar():
                         \n‎\n‎\n 
                         Serviços: \n‎\n{servicossString} \n
                         \n‎\n‎\n 
-                        Cabeçote: {"Sim" if objetoRaw.get('cabecote') else "Não"}\n
-                        Mancais do Cabeçote: {"Sim" if objetoRaw.get('mancaisCabecote') else "Não"}\n
-                        Comando: {"Sim" if objetoRaw.get('comando') else "Não"}\n
-                        Gaiola: {"Sim" if objetoRaw.get('gaiola') else "Não"}\n
-                        Vela: {"Sim" if objetoRaw.get('vela') else "Não"}\n
-                        Bloco: {"Sim" if objetoRaw.get('bloco') else "Não"}\n
-                        Mancais do Bloco: {"Sim" if objetoRaw.get('mancaisBloco') else "Não"}\n
-                        Virabrequim: {"Sim" if objetoRaw.get('virabrequim') else "Não"}\n
-                        Biela: {"Sim" if objetoRaw.get('biela') else "Não"}\n
-                        Motor Montado: {"Sim" if objetoRaw.get('motorMontado') else "Não"}\n
+                        Alarme: {"Sim" if objetoRaw.get('alarme') else "Não"}\n
+                        Bateria: {"Sim" if objetoRaw.get('Bateria') else "Não"}\n
+                        Buzina: {"Sim" if objetoRaw.get('buzina') else "Não"}\n
+                        Chave de Roda: {"Sim" if objetoRaw.get('chaveRoda') else "Não"}\n
+                        Extintor: {"Sim" if objetoRaw.get('extintor') else "Não"}\n
+                        Som: {"Sim" if objetoRaw.get('som') else "Não"}\n
+                        Tapete: {"Sim" if objetoRaw.get('tapete') else "Não"}\n
+                        Trava: {"Sim" if objetoRaw.get('trava') else "Não"}\n
+                        Triângulo: {"Sim" if objetoRaw.get('triangulo') else "Não"}\n
+                        Vidro: {"Sim" if objetoRaw.get('vidro') else "Não"}\n
+                        Macaco: {"Sim" if objetoRaw.get('macaco') else "Não"}\n
                         Obs:  {objetoRaw.get('obs')}\n
                         \n‎\n‎\n 
                         Fotos: \n‎\n{fotosString} \n
