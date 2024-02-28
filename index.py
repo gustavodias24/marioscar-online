@@ -75,16 +75,16 @@ def consultar():
                         \n‎\n‎\n 
                         Fotos: \n‎\n{fotosString} \n
                         \n‎\n‎\n 
-                       
-                        Aguardando Orçamento: {objetoRaw.get('aguardandoOrcamentoHoraData')}\n
-                        Aguardando Autorização: {objetoRaw.get('aguardandoAutorizacaoHoraData')}\n
-                        Serviço Autorizado: {objetoRaw.get('servicoAutorizadoHoraData')}\n
-                        Serviço em Execução: {objetoRaw.get('servicoEmExecucaoHoraData')}\n
-                        Serviço Concluído: {objetoRaw.get('servicoConcluidoHoraData')}\n
-                        Saiu para Entrega: {objetoRaw.get('saiuParaEntregaHoraData')}\n
-                        Entregue: {objetoRaw.get('entregueHoraData')}\n
-                        
-                    """)
+                       """)
+                    #     Aguardando Orçamento: {objetoRaw.get('aguardandoOrcamentoHoraData')}\n
+                    #     Aguardando Autorização: {objetoRaw.get('aguardandoAutorizacaoHoraData')}\n
+                    #     Serviço Autorizado: {objetoRaw.get('servicoAutorizadoHoraData')}\n
+                    #     Serviço em Execução: {objetoRaw.get('servicoEmExecucaoHoraData')}\n
+                    #     Serviço Concluído: {objetoRaw.get('servicoConcluidoHoraData')}\n
+                    #     Saiu para Entrega: {objetoRaw.get('saiuParaEntregaHoraData')}\n
+                    #     Entregue: {objetoRaw.get('entregueHoraData')}\n
+                    #
+                    # """)
 
     resultado_json = {
         "cpf": cpf_cnpj,
